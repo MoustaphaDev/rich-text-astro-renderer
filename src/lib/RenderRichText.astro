@@ -1,0 +1,18 @@
+---
+  import { documentToHtmlStringsAndAstroComponents as getMarkup } from "./astro-rich-renderer";
+  
+  const {document, renderOptions} = Astro.props;
+  const result = getMarkup(
+  document,
+  renderOptions
+);
+---
+  {result.map(item=>{
+    if (typeof item === "string") return <Fragment set:html={item} />;
+    if (typeof item === "undefined") return <></>;
+    if (typeof item === "object") {
+      if (typeof item.Component !== "function") return <></>;
+      const {Component, props} = item;
+      return <Component {...props}/>
+    }
+  })}
