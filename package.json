@@ -1,6 +1,6 @@
 {
     "name": "rich-text-astro-renderer",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Astro renderer and component for the Contentful rich text field type.",
     "license": "MIT",
     "type": "module",
