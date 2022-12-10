@@ -1,3 +1,15 @@
 {
-  "extends": "astro/tsconfigs/base"
+    "compilerOptions": {
+        "declaration": true,
+        "target": "ES2020",
+        "module": "ES2020",
+        "outDir": "./dist",
+        "strict": true,
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "noImplicitAny": false
+    },
+    "include": ["src"]
 }

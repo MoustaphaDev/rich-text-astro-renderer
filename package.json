@@ -1,20 +1,46 @@
 {
-  "name": "@example/minimal",
-  "type": "module",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "astro": "^1.6.14"
-  },
-  "devDependencies": {
-    "@contentful/rich-text-types": "^16.0.2",
-    "escape-html": "^1.0.3"
-  }
+    "name": "rich-text-astro-renderer",
+    "version": "0.0.1",
+    "description": "Astro renderer and component for the Contentful rich text field type.",
+    "license": "MIT",
+    "type": "module",
+    "exports": {
+        ".": "./index.ts"
+    },
+    "files": [
+        "index.ts"
+    ],
+    "bugs": {
+        "url": "https://github.com/MoustaphaDev/rich-text-astro-renderer/issues"
+    },
+    "homepage": "https://github.com/MoustaphaDev/rich-text-astro-renderer#readme",
+    "scripts": {
+        "test": "vitest",
+        "changeset": "changeset",
+        "version": "changeset version && pnpm install --no-frozen-lockfile"
+    },
+    "keywords": [
+        "astro"
+    ],
+    "author": {
+        "name": "MoustaphaDev",
+        "email": "moustapha.happydev@gmail.com",
+        "url": "https://twitter.com/a_happy_dev"
+    },
+    "dependencies": {
+        "@contentful/rich-text-types": "^16.0.2",
+        "escape-html": "^1.0.3"
+    },
+    "devDependencies": {
+        "@changesets/changelog-github": "^0.4.7",
+        "@changesets/cli": "^2.25.2",
+        "@types/node": "^18.7.13",
+        "cheerio": "1.0.0-rc.12",
+        "prettier": "^2.5.0",
+        "vitest": "^0.23.2"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/MoustaphaDev/rich-text-astro-renderer.git"
+    }
 }
