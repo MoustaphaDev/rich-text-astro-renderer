@@ -12,5 +12,9 @@
     "devDependencies": {
         "astro": "^1.6.14",
         "rich-text-astro-renderer": "../"
+    },
+    "dependencies": {
+        "@contentful/rich-text-html-renderer": "^16.0.2",
+        "contentful": "^9.2.14"
     }
 }
