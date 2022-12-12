@@ -1,3 +1,3 @@
-import RenderRichText from "./lib/RenderRichText.astro";
+import RenderRichText from './lib/RenderRichText.astro';
 
-export {RenderRichText as default, RenderRichText}
+export { RenderRichText as default, RenderRichText };
