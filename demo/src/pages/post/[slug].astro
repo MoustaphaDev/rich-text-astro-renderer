@@ -1,33 +1,46 @@
 ---
 import { contentfulClient } from '../../lib/contentful';
 import type { BlogPost } from '../../lib/contentful';
-import { RichTextRenderer } from 'rich-text-astro-renderer';
+import { RenderRichText } from 'rich-text-astro-renderer';
+import { INLINES, BLOCKS, Node } from '@contentful/rich-text-types';
+import ImageWrapper from '../../components/ImageWrapper.astro';
+
+export type Props = { post: BlogPost };
 
 export async function getStaticPaths() {
     const { items } = await contentfulClient.getEntries<BlogPost>({
         content_type: 'blogPost',
     });
-    const pages = items.map((item) => ({
-        params: { slug: item.fields.slug },
+    const pages = items.map((post) => ({
+        params: { slug: post.fields.slug },
         props: {
-            title: item.fields.title,
-            document: item.fields.content,
-            date: new Date(item.fields.date).toLocaleDateString(),
+            post: post.fields,
         },
     }));
     return pages;
 }
 
-const { document, title, date } = Astro.props;
+const { post } = Astro.props;
+
+const renderOptions = {
+    renderNode: {
+        [BLOCKS.EMBEDDED_ASSET]: (node, next) => {
+            return {
+                Component: ImageWrapper,
+                props: { node },
+            };
+        },
+    },
+};
 ---
 
 <html lang="en">
     <head>
-        <title>{title}</title>
+        <title>{post.title}</title>
     </head>
     <body>
-        <h1>{title}</h1>
-        <time>{date}</time>
-        <RichTextRenderer {document} />
+        <h1>{post.title}</h1>
+        <time>{post.date}</time>
+        <RenderRichText document={post.content} {renderOptions} />
     </body>
 </html>

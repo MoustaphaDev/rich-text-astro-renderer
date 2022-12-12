@@ -1,0 +1,16 @@
+---
+import { Picture } from '@astrojs/image/components';
+import { Node } from '@contentful/rich-text-types';
+export type Props = { node: Node };
+
+const { node } = Astro.props;
+const imageUrl = node.data.target.fields.file.url as string;
+---
+
+<Picture
+    src={imageUrl}
+    widths={[712, 982, 1344]}
+    aspectRatio="16:9"
+    sizes={`(max-width: 390px) 356px, (max-width: 834px) 491px, 672px`}
+    alt={'altText'}
+/>
