@@ -1,5 +1,11 @@
 # rich-text-astro-renderer
 
+## 0.0.5
+
+### Patch Changes
+
+- [`268d1b4`](https://github.com/MoustaphaDev/rich-text-astro-renderer/commit/268d1b422222916d69e923fbb7875c2a699129c3) Thanks [@MoustaphaDev](https://github.com/MoustaphaDev)! - rearrange folder structure to expose `index.ts` entrypoint
+
 ## 0.0.4
 
 ### Patch Changes
