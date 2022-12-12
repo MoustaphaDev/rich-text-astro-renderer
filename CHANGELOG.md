@@ -1,5 +1,11 @@
 # rich-text-astro-renderer
 
+## 0.0.4
+
+### Patch Changes
+
+- [`125d497`](https://github.com/MoustaphaDev/rich-text-astro-renderer/commit/125d497bf6f8f004afe1ac04bf39dc2dcaa1999c) Thanks [@MoustaphaDev](https://github.com/MoustaphaDev)! - add files to 'files' array in package.json
+
 ## 0.0.3
 
 ### Patch Changes
