@@ -1,5 +1,13 @@
 # rich-text-astro-renderer
 
+## 0.0.3
+
+### Patch Changes
+
+- [`b9f5a0b`](https://github.com/MoustaphaDev/rich-text-astro-renderer/commit/b9f5a0b564389b8254960229c7db0a7421012dda) Thanks [@MoustaphaDev](https://github.com/MoustaphaDev)! - correct package entry point
+
+- [`9f22c79`](https://github.com/MoustaphaDev/rich-text-astro-renderer/commit/9f22c79c9d00a2c8bf718d9df9fc07c2ac8247e4) Thanks [@MoustaphaDev](https://github.com/MoustaphaDev)! - remove irrelevant types from the page
+
 ## 0.0.2
 
 ### Patch Changes
