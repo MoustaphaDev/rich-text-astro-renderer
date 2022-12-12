@@ -164,5 +164,3 @@ function nodeToHtmlStringAndAstroComponent(
         return renderNode[node.nodeType](node, nextNode);
     }
 }
-
-export { default as RenderRichText } from './RenderRichText.astro';

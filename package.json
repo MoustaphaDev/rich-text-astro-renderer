@@ -5,12 +5,11 @@
     "license": "MIT",
     "type": "module",
     "exports": {
-        ".": "./src/index.ts"
+        ".": "./index.ts"
     },
     "files": [
-        "./src/lib",
-        "./src/index.ts",
-        "./src/types.ts"
+        "./lib",
+        "./index.ts"
     ],
     "bugs": {
         "url": "https://github.com/MoustaphaDev/rich-text-astro-renderer/issues"

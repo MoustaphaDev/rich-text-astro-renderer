@@ -1,5 +1,11 @@
 ---
-  import { documentToHtmlStringsAndAstroComponents as getMarkup } from "./astro-rich-text-renderer";
+  import { documentToHtmlStringsAndAstroComponents as getMarkup, Options } from "./astro-rich-text-renderer";
+  import { Document } from "@contentful/rich-text-types";
+
+  type Props = {
+    document: Document;
+    renderOptions?: Partial<Options>
+  }
   
   const {document, renderOptions} = Astro.props;
   const result = getMarkup(
